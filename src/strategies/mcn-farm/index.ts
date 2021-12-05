@@ -88,9 +88,9 @@ export async function strategy(
     }
   });
 
-  for (let address in values) {
+  for (const address in values) {
     if (values.hasOwnProperty(address)) {
-      let value = parseFloat(formatUnits(values[address], 18));
+      const value = parseFloat(formatUnits(values[address], 18));
       values[address] = value;
     }
   }
